@@ -9,6 +9,6 @@ def parse_timestamp(value: Optional[str]):
     else:
         try:
             timestamp = dateparser.parse(value)
-            return timestamp.isoformat("seconds") if timestamp else None
+            return timestamp.isoformat(timespec="seconds") if timestamp else None
         except:
             return None
